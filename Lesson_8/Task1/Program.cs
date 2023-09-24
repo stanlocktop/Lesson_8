@@ -1,12 +1,12 @@
 ﻿using System;
 class Address
 {
-    private string index;
-    private string country;
-    private string city;
-    private string street;
-    private string house;
-    private string apartment;
+    private string index; // індекс
+    private string country; // країна
+    private string city; // місто 
+    private string street; // вулиця
+    private string house; // номер будинку
+    private string apartment; // номер квартири
 
     public string Index
     {
