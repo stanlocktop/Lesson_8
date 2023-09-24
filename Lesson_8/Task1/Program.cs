@@ -47,6 +47,8 @@ class Address
 
     public void DisplayAddress()
     {
+        Console.OutputEncoding = System.Text.Encoding.Unicode;
+        Console.ForegroundColor = ConsoleColor.Magenta; // устанавливаем цвет
         Console.WriteLine($"Індекс: {Index}");
         Console.WriteLine($"Країна: {Country}");
         Console.WriteLine($"Місто: {City}");
@@ -55,7 +57,6 @@ class Address
         Console.WriteLine($"Номер квартири: {Apartment}");
     }
 }
-
 class Program
 {
     static void Main(string[] args)
@@ -70,9 +71,10 @@ class Program
         myAddress.House = "25";
         myAddress.Apartment = "12";
 
-        // Виводимо адресу на екран
+        Console.ForegroundColor = ConsoleColor.Green; // устанавливаем цвет
         Console.WriteLine("Поштова адреса:");
         myAddress.DisplayAddress();
+        Console.ResetColor(); // сбрасываем в стандартный
         Console.ReadKey();
     }
 }
