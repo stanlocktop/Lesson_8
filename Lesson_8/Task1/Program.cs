@@ -1,22 +1,78 @@
-﻿namespace Task1
+﻿using System;
+
+class Address
 {
-//    1) Написати програму, яка перевіряє введене число на парність/непарність.
+    private string index;
+    private string country;
+    private string city;
+    private string street;
+    private string house;
+    private string apartment;
 
-//13 -> "непарне"
-
-//22 -> "парне"
-    class Program
+    public string Index
     {
-        static void Main(string[] args)
-        {
-            Console.OutputEncoding = System.Text.Encoding.Unicode;
-            Console.WriteLine("Введіть число: ");
-            int a = Convert.ToInt32(Console.Read());
-            {
-                if (a % 2 == 0) Console.WriteLine("Парне");
-                else Console.WriteLine("Непарне");
-            }
-            Console.ReadKey();
-        }
+        get { return index; }
+        set { index = value; }
+    }
+
+    public string Country
+    {
+        get { return country; }
+        set { country = value; }
+    }
+
+    public string City
+    {
+        get { return city; }
+        set { city = value; }
+    }
+
+    public string Street
+    {
+        get { return street; }
+        set { street = value; }
+    }
+
+    public string House
+    {
+        get { return house; }
+        set { house = value; }
+    }
+
+    public string Apartment
+    {
+        get { return apartment; }
+        set { apartment = value; }
+    }
+
+    public void DisplayAddress()
+    {
+        Console.WriteLine($"Індекс: {Index}");
+        Console.WriteLine($"Країн: {Country}");
+        Console.WriteLine($"City: {City}");
+        Console.WriteLine($"Street: {Street}");
+        Console.WriteLine($"House: {House}");
+        Console.WriteLine($"Apartment: {Apartment}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Address myAddress = new Address();
+
+        // Заповнюємо поля адреси
+        myAddress.Index = "12345";
+        myAddress.Country = "Україна";
+        myAddress.City = "Київ";
+        myAddress.Street = "Вулиця Шевченка";
+        myAddress.House = "25";
+        myAddress.Apartment = "12";
+
+        // Виводимо адресу на екран
+        Console.WriteLine("Поштова адреса:");
+        myAddress.DisplayAddress();
+        Console.ReadKey();
     }
 }
