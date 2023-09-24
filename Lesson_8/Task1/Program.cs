@@ -48,11 +48,11 @@ class Address
     public void DisplayAddress()
     {
         Console.WriteLine($"Індекс: {Index}");
-        Console.WriteLine($"Країн: {Country}");
-        Console.WriteLine($"City: {City}");
-        Console.WriteLine($"Street: {Street}");
-        Console.WriteLine($"House: {House}");
-        Console.WriteLine($"Apartment: {Apartment}");
+        Console.WriteLine($"Країна: {Country}");
+        Console.WriteLine($"Місто: {City}");
+        Console.WriteLine($"Вулиця: {Street}");
+        Console.WriteLine($"Номер будинку: {House}");
+        Console.WriteLine($"Номер квартири: {Apartment}");
     }
 }
 
